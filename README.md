@@ -103,7 +103,7 @@ python line_count.py --source 1 --vit ""                 # detector + counting o
 # terminal 1 - main camera (counting + ViT grading), sends to the receiver
 python line_count.py --source 1 --device cpu
 # terminal 2 - sorting camera (box-only model, line in the middle), drives the ESP32
-python receiver.py --source 0 --device cpu --esp 192.168.4.1
+python receiver.py --source 0 --device 0 --esp 192.168.4.1   # uses the same detector_v3.pt as line_count.py
 ```
 
 - The receiver's line starts in the **middle** of its view (`--line vertical` / `horizontal`);

@@ -105,10 +105,10 @@ class ESP32:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--weights", default=os.path.join(HERE, "weights/receiver_yolo11n.pt"))
+    ap.add_argument("--weights", default=os.path.join(HERE, "weights/detector_v3.pt"))
     ap.add_argument("--source", default="0", help="camera index of the RECEIVER camera, or a video file")
     ap.add_argument("--device", default="cpu", help="cpu or 0 for the NVIDIA GPU")
-    ap.add_argument("--imgsz", type=int, default=416)
+    ap.add_argument("--imgsz", type=int, default=512)
     ap.add_argument("--conf", type=float, default=0.3)
     ap.add_argument("--tracker", default=os.path.join(HERE, "areca_bytetrack.yaml"))
     ap.add_argument("--config", default=os.path.join(HERE, "receiver_line.json"), help="where the line is saved")
