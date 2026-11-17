@@ -1,0 +1,8 @@
+# ByteTrack settings tuned for arecanuts (many similar-looking objects, short occlusions)
+tracker_type: bytetrack
+track_high_thresh: 0.35   # detections above this are matched first
+track_low_thresh: 0.1     # weak detections still used to keep existing tracks alive
+new_track_thresh: 0.45    # a new ID needs a fairly confident detection (avoids ghost IDs)
+track_buffer: 60          # keep a lost ID for 60 frames (~2 s at 30 fps) so it comes back with the same ID
+match_thresh: 0.8         # IoU matching threshold
+fuse_score: True

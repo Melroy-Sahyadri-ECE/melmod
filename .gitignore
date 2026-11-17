@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+runs/
+missed_*.jpg
+missed_*.txt
+tracks.csv
+*.mp4
+*.avi
+*.zip
+line_config.json
+receiver_line.json
